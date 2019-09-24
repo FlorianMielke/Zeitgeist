@@ -1,28 +1,24 @@
 import Foundation
 
-// MARK: -
-// MARK: Enumerating
+// MARK: - Enumerating
 
 public extension Int {
   func times(_ f: () -> ()) {
-    if self > 0 {
-      for _ in 0..<self {
-        f()
-      }
+    guard self > 0 else { return }
+    for _ in 0..<self {
+      f()
     }
   }
   
   func times(_ f: @autoclosure () -> ()) {
-    if self > 0 {
-      for _ in 0..<self {
-        f()
-      }
+    guard self > 0 else { return }
+    for _ in 0..<self {
+      f()
     }
   }
 }
 
-// MARK: -
-// MARK: Rounding
+// MARK: - Rounding
 
 extension Int: Roundable {
   func rounded(by rounding: Rounding) -> Int {
@@ -70,8 +66,7 @@ extension Int: Roundable {
   }
 }
 
-// MARK: -
-// MARK: Calculating
+// MARK: - Calculating
 
 public extension Int {
   func inverted() -> Int {

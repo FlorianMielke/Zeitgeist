@@ -6,13 +6,8 @@ public struct Period: Equatable, Hashable, Comparable {
   public let ends: Time
   public let allDay: Bool
   
-  public var duration: Duration {
-    return starts.duration(to: ends)
-  }
-  
-  public var maximized: Period {
-    return Period(starts: starts.starts, ends: ends.ends)
-  }
+  public var duration: Duration { starts.duration(to: ends) }
+  public var maximized: Period { Period(starts: starts.starts, ends: ends.ends) }
 
   public init(starts: Time, ends: Time, allDay: Bool) {
     self.starts = starts

@@ -1,15 +1,12 @@
 import Foundation
 
 public final class Travel {
+  public static var now: Date { traveledTo ?? Date() }
+  public static var isTraveled: Bool { traveledTo != nil }
+  
   static var traveledTo: Date?
   static var timeZone = TimeZone.current
-  public static var now: Date {
-    return traveledTo ?? Date()
-  }
-  public static var isTraveled: Bool {
-    return traveledTo != nil
-  }
-  
+
   public static func travel(to: Date, in timeZone: TimeZone = TimeZone.current) {
     traveledTo = to
     self.timeZone = timeZone

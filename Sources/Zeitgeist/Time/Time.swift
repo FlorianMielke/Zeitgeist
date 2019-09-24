@@ -11,20 +11,16 @@ public enum Weekday: Int {
 }
 
 public struct Time: Equatable, Hashable, Comparable {
+  public static var current: Time { Time() }
+
   public let calendar: Calendar
   public let date: Date
-  public var timeZone: TimeZone {
-    return calendar.timeZone
-  }
-  
-  public static var current: Time {
-    return Time()
-  }
+  public var timeZone: TimeZone { calendar.timeZone }
   
   public static func current(calendar: Calendar) -> Time {
     return Time(calendar: calendar)
   }
-  
+
   public static func currentTime(at date: Time, calendar: Calendar = .current) -> Time {
     let current = Time.current(calendar: calendar)
     return Time(date.year, date.month, date.day, current.hour, current.minute, current.second, calendar: calendar)
@@ -51,8 +47,7 @@ public struct Time: Equatable, Hashable, Comparable {
   }
 }
 
-// MARK: -
-// MARK: Comparison
+// MARK: - Comparison
 
 public extension Time {
   func isOnSameDay(_ other: Time) -> Bool {
@@ -64,8 +59,7 @@ public extension Time {
   }
 }
 
-// MARK: -
-// MARK: Calculation
+// MARK: - Calculation
 
 public extension Time {
   static func +(time: Time, duration: Duration) -> Time {
@@ -76,8 +70,7 @@ public extension Time {
   }
 }
 
-// MARK: -
-// MARK: Components
+// MARK: - Components
 
 public extension Time {
   var year: Int {
@@ -121,8 +114,7 @@ public extension Time {
   }
 }
 
-// MARK: -
-// MARK: Rounding
+// MARK: - Rounding
 
 extension Time {
   public func rounded(by rounding: Rounding) -> Time {
@@ -142,8 +134,7 @@ extension Time {
   }
 }
 
-// MARK: -
-// MARK: Manipulation
+// MARK: - Manipulation
 
 extension Time {
   public func trimmed(to component: Calendar.Component) -> Time {

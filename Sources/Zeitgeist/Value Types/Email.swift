@@ -1,6 +1,6 @@
 import Foundation
 
-public struct Email : Equatable {
+public struct Email: Equatable {
   public let value: String
   
   public init(value: String = "") {

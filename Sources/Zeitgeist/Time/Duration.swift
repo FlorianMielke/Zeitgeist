@@ -30,8 +30,7 @@ public struct Duration: Equatable, Hashable {
   }
 }
 
-// MARK: -
-// MARK - Math
+// MARK: - Math
 
 extension Duration {
   public static func +(lhs: Duration, rhs: Duration) -> Duration {
