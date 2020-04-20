@@ -43,7 +43,7 @@ final class DurationTest: XCTestCase {
     XCTAssertEqual(Time(at: expected), time)
   }
   
-  func testComparabale() {
+  func testComparable() {
     XCTAssertTrue(Duration(1) < Duration(2))
     XCTAssertTrue(Duration(5) < Duration(8))
   }
@@ -54,7 +54,7 @@ final class DurationTest: XCTestCase {
     XCTAssertEqual(Duration(-3), Duration(0) + Duration(-3))
   }
 
-  func testSubstraction() {
+  func testSubtraction() {
     XCTAssertEqual(Duration(-2), Duration(1) - Duration(3))
     XCTAssertEqual(Duration(1), Duration(-3) - Duration(-4))
     XCTAssertEqual(Duration(13), Duration(14) - Duration(1))
@@ -64,8 +64,8 @@ final class DurationTest: XCTestCase {
     ("testCurrentAgo", testCurrentAgo),
     ("test1DayAgo", test1DayAgo),
     ("test2HoursAgo", test2HoursAgo),
-    ("testComparabale", testComparabale),
+    ("testComparable", testComparable),
     ("testAddition", testAddition),
-    ("testSubstraction", testSubstraction),
+    ("testSubtraction", testSubtraction),
   ]
 }
