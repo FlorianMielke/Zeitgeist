@@ -30,8 +30,8 @@ final class TravelTest : XCTestCase {
   ]
 }
 
-extension Time {
-  public var timeIntervalSinceReferenceDate: TimeInterval {
+fileprivate extension Time {
+  var timeIntervalSinceReferenceDate: TimeInterval {
     return date.timeIntervalSinceReferenceDate
   }
 }
