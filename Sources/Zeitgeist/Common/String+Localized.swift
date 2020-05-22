@@ -6,6 +6,6 @@
 
 import Foundation
 
-extension String: Localizable {
+extension String {
     var localized: String { NSLocalizedString(self, tableName: "ZeitgeistLocalizable", bundle: Zeitgeist.bundle, value: "", comment: "") }
 }
