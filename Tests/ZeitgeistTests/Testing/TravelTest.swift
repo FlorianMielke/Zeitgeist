@@ -1,37 +1,43 @@
+/**
+*  Zeitgeist
+*  Copyright (c) Florian Mielke 2020
+*  MIT license, see LICENSE file for details
+*/
+
 import XCTest
 @testable import Zeitgeist
 
 final class TravelTest : XCTestCase {
-  let calendar = Calendar.current
-  var tomorrow: Date!
-  
-  override func setUp() {
-    var oneDay = DateComponents()
-    oneDay.day = 1
-    tomorrow = calendar.date(byAdding: oneDay, to: Date())!
-  }
-  
-  func testItTravelsToTomorrow() {
-    Travel.travel(to: tomorrow)
+    let calendar = Calendar.current
+    var tomorrow: Date!
     
-    XCTAssertEqual(tomorrow, Time.current.date)
-    XCTAssertEqual(tomorrow, Travel.now)
-    XCTAssertTrue(Travel.isTraveled)
+    override func setUp() {
+        var oneDay = DateComponents()
+        oneDay.day = 1
+        tomorrow = calendar.date(byAdding: oneDay, to: Date())!
+    }
     
-    Travel.travelBack()
+    func testItTravelsToTomorrow() {
+        Travel.travel(to: tomorrow)
+        
+        XCTAssertEqual(tomorrow, Time.current.date)
+        XCTAssertEqual(tomorrow, Travel.now)
+        XCTAssertTrue(Travel.isTraveled)
+        
+        Travel.travelBack()
+        
+        XCTAssertEqual(Date().timeIntervalSinceReferenceDate, Time.current.timeIntervalSinceReferenceDate, accuracy: 0.01)
+        XCTAssertEqual(Date().timeIntervalSinceReferenceDate, Travel.now.timeIntervalSinceReferenceDate, accuracy:0.01)
+        XCTAssertFalse(Travel.isTraveled)
+    }
     
-    XCTAssertEqual(Date().timeIntervalSinceReferenceDate, Time.current.timeIntervalSinceReferenceDate, accuracy: 0.01)
-    XCTAssertEqual(Date().timeIntervalSinceReferenceDate, Travel.now.timeIntervalSinceReferenceDate, accuracy:0.01)
-    XCTAssertFalse(Travel.isTraveled)
-  }
-
-  static var allTests = [
-    ("testItTravelsToTomorrow", testItTravelsToTomorrow),
-  ]
+    static var allTests = [
+        ("testItTravelsToTomorrow", testItTravelsToTomorrow),
+    ]
 }
 
 fileprivate extension Time {
-  var timeIntervalSinceReferenceDate: TimeInterval {
-    return date.timeIntervalSinceReferenceDate
-  }
+    var timeIntervalSinceReferenceDate: TimeInterval {
+        return date.timeIntervalSinceReferenceDate
+    }
 }
