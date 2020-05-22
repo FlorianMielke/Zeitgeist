@@ -15,6 +15,8 @@ final class Time_ComponentTest : XCTestCase {
   
   func testIsUTC() {
     XCTAssertTrue(Time(calendar: .utc).isUTC)
+    
+    let calendar = Calendar.current(with: 5.hours)
     XCTAssertFalse(Time(calendar: .current).isUTC)
   }
   

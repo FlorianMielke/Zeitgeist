@@ -12,12 +12,8 @@ final class Time_DurationTest : XCTestCase {
   }
   
   func testDurationWithTimesInDifferentTimeZones() {
-    var currentCalendar = Calendar.current
-    currentCalendar.timeZone = TimeZone.durationFromGMT(2.hours)!
-    let subject = Time(2018, 1, 1, 1, 1, 0, calendar: currentCalendar)
-    var otherCalendar = Calendar.current
-    otherCalendar.timeZone = TimeZone.durationFromGMT(4.hours)!
-    let other = Time(2018, 1, 1, 2, 1, 0, calendar: otherCalendar)
+    let subject = Time(2018, 1, 1, 1, 1, 0, calendar: Calendar.current(with: 2.hours)!)
+    let other = Time(2018, 1, 1, 2, 1, 0, calendar: Calendar.current(with: 4.hours)!)
 
     let seconds = subject.duration(to: other)
     
