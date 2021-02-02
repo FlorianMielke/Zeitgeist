@@ -13,6 +13,28 @@
 
 Zeitgeist provides some lightweight and swifty classes around `Date`. Somewhat inspired by Ruby on Rails 🤷‍♂️.
 
+## Installation
+
+Zeitgeist is distributed using the [Swift Package Manager](https://swift.org/package-manager). To install it into a project, add it as a dependency within your `Package.swift` manifest:
+
+```swift
+let package = Package(
+    ...
+    dependencies: [
+        .package(url: "https://github.com/florianmielke/zeitgeist.git", from: "0.0.2")
+    ],
+    ...
+)
+```
+
+Then import Zeitgeist wherever you’d like to use it:
+
+```swift
+import Zeitgeist
+```
+
+For more information on how to use the Swift Package Manager, check out [its official documentation](https://swift.org/package-manager).
+
 ## Contributions and support
 
 This project does not come with GitHub Issues-based support, and users are instead encouraged to become active participants in its continued development — by fixing any bugs that they encounter, or by improving the documentation wherever it’s found to be lacking.
