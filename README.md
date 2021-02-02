@@ -1,7 +1,7 @@
 # Zeitgeist
 
 <p align="center">
-    <img src="https://img.shields.io/badge/Swift-5.2-orange.svg" />
+    <img src="https://github.com/FlorianMielke/Zeitgeist/workflows/Swift/badge.svg" alt="GitHub Workflows" />
     <a href="https://swift.org/package-manager">
         <img src="https://img.shields.io/badge/swiftpm-compatible-brightgreen.svg?style=flat" alt="Swift Package Manager" />
     </a>
@@ -12,8 +12,6 @@
 </p>
 
 Zeitgeist provides some lightweight and swifty classes around `Date`. Somewhat inspired by Ruby on Rails 🤷‍♂️.
-
-![Swift](https://github.com/FlorianMielke/Zeitgeist/workflows/Swift/badge.svg)
 
 ## Contributions and support
 
