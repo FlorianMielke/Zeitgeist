@@ -16,7 +16,7 @@ public struct Duration: Equatable, Hashable {
     }
     
     public var inverted: Duration {
-        return Duration(second.inverted())
+        return Duration(second.negated())
     }
     
     public init(_ second: Int = 0) {

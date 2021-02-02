@@ -75,7 +75,9 @@ extension Int: Roundable {
 // MARK: - Calculating
 
 public extension Int {
-    func inverted() -> Int {
-        return self * (-1)
+    func negated() -> Int {
+        var i = self
+        i.negate()
+        return i
     }
 }
