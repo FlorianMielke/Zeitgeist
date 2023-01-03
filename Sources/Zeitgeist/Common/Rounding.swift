@@ -10,7 +10,7 @@ protocol Roundable {
     func rounded(by rounding: Rounding) -> Self
 }
 
-public enum RoundingMethod: Int, Equatable, Hashable, CaseIterable, CustomStringConvertible {
+@objc public enum RoundingMethod: Int, Equatable, Hashable, CaseIterable, CustomStringConvertible {
     case nearest
     case up
     case down
@@ -26,7 +26,7 @@ public enum RoundingMethod: Int, Equatable, Hashable, CaseIterable, CustomString
     public var localized: String { "rounding.method.\(description)".localized }
 }
 
-public enum RoundingInterval: Int, Equatable, Hashable, CaseIterable {
+@objc public enum RoundingInterval: Int, Equatable, Hashable, CaseIterable {
     case one = 1
     case two = 2
     case three = 3
