@@ -6,7 +6,7 @@ let package = Package(
     name: "Zeitgeist",
     platforms: [
         .iOS(.v13),
-        .watchOS(.v6)
+        .watchOS(.v5)
     ],
     products: [
         .library(
