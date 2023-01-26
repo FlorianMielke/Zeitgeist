@@ -1,11 +1,12 @@
 /**
-*  Zeitgeist
-*  Copyright (c) Florian Mielke 2020
-*  MIT license, see LICENSE file for details
-*/
+ *  Zeitgeist
+ *  Copyright (c) Florian Mielke 2020
+ *  MIT license, see LICENSE file for details
+ */
 
 import Foundation
 
 class Zeitgeist {
-    static var bundle: Bundle { Bundle(for: Zeitgeist.self) }
+  static let bundle = Bundle(for: Zeitgeist.self)
+  static let localizableTableName = "ZeitgeistLocalizable"
 }
