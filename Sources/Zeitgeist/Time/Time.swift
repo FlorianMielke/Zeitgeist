@@ -65,17 +65,6 @@ public extension Time {
     }
 }
 
-// MARK: - Calculation
-
-public extension Time {
-    static func +(time: Time, duration: Duration) -> Time {
-        if let date = time.calendar.date(byAdding: duration.components, to: time.date) {
-            return Time(at: date, calendar: time.calendar)
-        }
-        return time
-    }
-}
-
 // MARK: - Components
 
 public extension Time {
@@ -105,14 +94,6 @@ public extension Time {
     
     func component(_ component: Calendar.Component) -> Int {
         return calendar.component(component, from: date)
-    }
-    
-    func duration(to other: Time) -> Duration {
-        let comp: Set<Calendar.Component> = [.second]
-        guard let seconds = calendar.dateComponents(comp, from: date, to: other.date).second else {
-            return 0.seconds
-        }
-        return Duration(seconds)
     }
     
     var isUTC: Bool {
