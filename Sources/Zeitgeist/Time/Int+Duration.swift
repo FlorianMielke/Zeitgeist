@@ -6,7 +6,7 @@
 
 import Foundation
 
-extension Int {
+public extension Int {
   var seconds: TimeInterval {
     TimeInterval(self)
   }
