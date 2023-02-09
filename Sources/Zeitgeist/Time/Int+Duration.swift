@@ -1,33 +1,35 @@
+import Foundation
+
 public extension Int {
-  var second: Int {
-    self
+  var second: TimeInterval {
+    TimeInterval(self)
   }
   
-  var seconds: Int {
+  var seconds: TimeInterval {
     second
   }
   
-  var minute: Int {
-    self * 60.seconds
+  var minute: TimeInterval {
+    TimeInterval(self * 60)
   }
   
-  var minutes: Int {
+  var minutes: TimeInterval {
     minute
   }
   
-  var hour: Int {
-    self * 60.minutes
+  var hour: TimeInterval {
+    TimeInterval(self * 60 * 60)
   }
   
-  var hours: Int {
+  var hours: TimeInterval {
     hour
   }
   
-  var day: Int {
-    self * 24.hours
+  var day: TimeInterval {
+    TimeInterval(self * 24 * 60 * 60)
   }
   
-  var days: Int {
+  var days: TimeInterval {
     day
   }
 }
