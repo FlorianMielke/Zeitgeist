@@ -1,35 +1,41 @@
+/**
+ *  Zeitgeist
+ *  Copyright (c) Florian Mielke 2023
+ *  MIT license, see LICENSE file for details
+ */
+
 import Foundation
 
-public extension Int {
-  var second: TimeInterval {
+extension Int {
+  var seconds: TimeInterval {
     TimeInterval(self)
   }
   
-  var seconds: TimeInterval {
-    second
-  }
-  
-  var minute: TimeInterval {
-    TimeInterval(self * 60)
+  var second: TimeInterval {
+    seconds
   }
   
   var minutes: TimeInterval {
-    minute
+    self.seconds * 60
   }
   
-  var hour: TimeInterval {
-    TimeInterval(self * 60 * 60)
+  var minute: TimeInterval {
+    minutes
   }
   
   var hours: TimeInterval {
-    hour
+    self.minutes * 60
   }
   
+  var hour: TimeInterval {
+    self.hours
+  }
+
   var day: TimeInterval {
-    TimeInterval(self * 24 * 60 * 60)
+    self.hours * 24
   }
   
   var days: TimeInterval {
-    day
+    self.day
   }
 }
