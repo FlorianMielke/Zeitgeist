@@ -6,16 +6,6 @@
 
 import Foundation
 
-public enum Weekday: Int, CaseIterable {
-  case monday
-  case tuesday
-  case wednesday
-  case thursday
-  case friday
-  case saturday
-  case sunday
-}
-
 public struct Time: Equatable, Hashable, Comparable {
   public static var current: Time { Time() }
   

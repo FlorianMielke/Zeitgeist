@@ -22,9 +22,4 @@ final class Time_ComponentTest : XCTestCase {
   func testIsUTC() {
     XCTAssertTrue(Time(calendar: .utc).isUTC)
   }
-  
-  static var allTests = [
-    ("testComponents", testComponents),
-    ("testIsUTC", testIsUTC),
-  ]
 }

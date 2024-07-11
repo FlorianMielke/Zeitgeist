@@ -42,11 +42,4 @@ final class Int_RoundingTest : XCTestCase {
     XCTAssertEqual(0, 4.rounded(to: 10))
     XCTAssertEqual(20, 24.rounded(to: 10))
   }
-  
-  static var allTests = [
-    ("testItRoundsUp", testItRoundsUp),
-    ("testItRoundsDown", testItRoundsDown),
-    ("testItHalfRoundsUp", testItHalfRoundsUp),
-    ("testItHalfRoundsDown", testItHalfRoundsDown),
-  ]
 }

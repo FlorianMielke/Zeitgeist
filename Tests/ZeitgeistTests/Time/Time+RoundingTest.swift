@@ -47,11 +47,4 @@ final class Time_RoundingTest : XCTestCase {
     let expected = Time(2018, 1, 1, 9, 0, 0)
     XCTAssertEqual(expected, rounded)
   }
-  
-  static var allTests = [
-    ("testItRoundsUpBy5Minutes", testItRoundsUpBy5Minutes),
-    ("testItRoundsDownBy5Minutes", testItRoundsDownBy5Minutes),
-    ("testItRoundsNoneBy15Minutes", testItRoundsNoneBy15Minutes),
-    ("testItRoundsToFullHours", testItRoundsToFullHours),
-  ]
 }

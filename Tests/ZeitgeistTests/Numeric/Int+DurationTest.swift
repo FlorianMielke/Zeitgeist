@@ -22,10 +22,4 @@ class Int_Duration: XCTestCase {
     XCTAssertEqual(30412800.seconds, 352.days)
     XCTAssertEqual((-20131200).seconds, (-233).days)
   }
-  
-  static var allTests = [
-    ("testMinutes", testMinutes),
-    ("testHours", testHours),
-    ("testDays", testDays)
-  ]
 }

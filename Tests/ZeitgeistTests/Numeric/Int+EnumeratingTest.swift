@@ -37,10 +37,4 @@ final class Int_EnumeratingTest : XCTestCase {
     
     XCTAssertEqual("abbbbb", result)
   }
-  
-  static var allTests = [
-    ("testItCallsAClosure0Times", testItCallsAClosure0Times),
-    ("testItCallsAClosure1Time", testItCallsAClosure1Time),
-    ("testItCallsAClosure5Times", testItCallsAClosure5Times),
-  ]
 }

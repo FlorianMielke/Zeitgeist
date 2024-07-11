@@ -30,10 +30,6 @@ final class TravelTest : XCTestCase {
     XCTAssertEqual(Date().timeIntervalSinceReferenceDate, Travel.now.timeIntervalSinceReferenceDate, accuracy:0.01)
     XCTAssertFalse(Travel.isTraveled)
   }
-  
-  static var allTests = [
-    ("testItTravelsToTomorrow", testItTravelsToTomorrow),
-  ]
 }
 
 fileprivate extension Time {

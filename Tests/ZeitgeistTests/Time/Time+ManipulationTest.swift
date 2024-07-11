@@ -16,9 +16,4 @@ final class Time_ManipulationTest : XCTestCase {
   func testEnds() {
     XCTAssertEqual(Time(2018, 5, 3, 23, 59, 59), Time(2018, 5, 3, 12).ends)
   }
-  
-  static var allTests = [
-    ("testTrim", testTrim),
-    ("testEnds", testEnds),
-  ]
 }

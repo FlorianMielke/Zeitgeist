@@ -13,8 +13,4 @@ final class Int_CalculationTest : XCTestCase {
     XCTAssertEqual(-1, 1.negated())
     XCTAssertEqual(1, -1.negated())
   }
-  
-  static var allTests = [
-    ("testItNegates", testItNegates),
-  ]
 }
