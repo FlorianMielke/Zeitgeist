@@ -9,4 +9,5 @@ import Foundation
 extension TimeZone {
   static var tokyo: TimeZone { TimeZone(identifier: "Asia/Tokyo")! }
   static var berlin: TimeZone { TimeZone(identifier: "Europe/Berlin")! }
+  static var losAngeles: TimeZone { TimeZone(identifier: "America/Los_Angeles")! }
 }
