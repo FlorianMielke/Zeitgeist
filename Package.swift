@@ -6,7 +6,7 @@ import PackageDescription
 let package = Package(
   name: "Zeitgeist",
   platforms: [
-    .iOS(.v15),
+    .iOS(.v17),
     .watchOS(.v10)
   ],
   products: [
